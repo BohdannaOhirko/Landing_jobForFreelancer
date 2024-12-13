@@ -9,6 +9,10 @@ ol[class] {
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body,
 h1,
 h2,
@@ -26,6 +30,14 @@ dd {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -34,8 +46,40 @@ body {
   background-color: rgb(245, 247, 255);
 }
 
-.container {
-  width: 1110px;
+.header .wrapper__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+.header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 104px;
+  height: 45.32px;
+}
+.logo img {
+  width: 100%;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 433px;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__list .menu__link {
+  font-family: "Open Sans";
+  color: rgb(39, 35, 35);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
 }
 
 .search {
@@ -67,4 +111,31 @@ input[type=submit] {
   background: url(/assets/img/search.png) no-repeat 50% 50%;
   position: absolute;
   right: 40px;
+}
+
+.btn-row button {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 62px;
+  letter-spacing: 0.02em;
+  background: none;
+  color: #272323;
+}
+.btn-row span {
+  font-weight: 400;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 62px;
+  color: #272323;
+}
+.btn-row > button:first-child {
+  color: #4238af;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }/*# sourceMappingURL=style.css.map */
