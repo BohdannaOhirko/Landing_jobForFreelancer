@@ -1,4 +1,70 @@
-.content-navigation {
-  border-color: #3bbfce;
-  color: #2ca2af;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  box-shadow: 0px 4px 23px 0px rgba(49, 49, 49, 0.05);
+  background-color: rgb(245, 247, 255);
+}
+
+.container {
+  width: 1110px;
+}
+
+.search {
+  width: 307px;
+  min-height: 35px;
+  position: relative;
+}
+
+input[type=search] {
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 50px;
+  width: 273px;
+  vertical-align: middle;
+  background: rgb(255, 255, 255);
+  color: #a5a5a5;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding-left: 19px;
+}
+
+input[type=submit] {
+  width: 28px;
+  height: 35px;
+  border: none;
+  background: url(/assets/img/search.png) no-repeat 50% 50%;
+  position: absolute;
+  right: 40px;
 }/*# sourceMappingURL=style.css.map */
