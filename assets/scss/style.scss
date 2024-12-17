@@ -21,6 +21,14 @@ $link: rgb(39, 35, 35);
   line-height: 24px;
   letter-spacing: 0.02em;
 }
+%title {
+  color: rgb(53, 52, 52);
+  font-family: Oswald;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.05em;
+}
 %description {
   color: rgb(168, 168, 168);
   font-family: "Open Sans";
@@ -48,6 +56,20 @@ $link: rgb(39, 35, 35);
   width: 30px;
   height: 30px;
   border-radius: 6px;
+}
+@mixin choose__block {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 7px;
+}
+@mixin choose_icon {
+  position: absolute;
+  content: url("/assets/img/choose_block.png");
+  width: 34.41px;
+  height: 34.41px;
+  top: 20%;
+  left: 20%;
 }
 
 *,
@@ -264,6 +286,7 @@ input[type="submit"] {
       align-items: center;
       justify-content: center;
       gap: 40px;
+      margin-bottom: 119px;
       .cover__finding-job {
         width: 635px;
         height: 433px;
@@ -290,12 +313,7 @@ input[type="submit"] {
       letter-spacing: 0.05em;
     }
     &__title h2 {
-      color: rgb(53, 52, 52);
-      font-family: Oswald;
-      font-size: 40px;
-      font-weight: 400;
-      line-height: 50px;
-      letter-spacing: 0.05em;
+      @extend %title;
       width: 395px;
       margin-bottom: 26px;
     }
@@ -394,6 +412,72 @@ input[type="submit"] {
         width: 372px;
         margin-top: -15px;
       }
+    }
+  }
+  .why__choose__us {
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &__title h2 {
+      @extend %title;
+      margin-bottom: 20px;
+    }
+    &__description {
+      @extend %description;
+      font-size: 14px;
+      width: 543px;
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__blocks div {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .choose__block__1 {
+      @include choose__block;
+      background-color: #6156dc;
+      &__icon {
+        @include choose_icon;
+      }
+    }
+    .choose__block__2 {
+      @include choose__block;
+      background-color: #ef6010;
+      &__icon {
+        @include choose_icon;
+      }
+    }
+    .choose__block__3 {
+      @include choose__block;
+      background-color: #a73eed;
+      &__icon {
+        @include choose_icon;
+      }
+    }
+    .choose__block__title {
+      margin-top: 80px;
+      color: rgb(50, 50, 50);
+      font-family: "Open Sans";
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+    }
+    .choose__block__description {
+      @extend %description;
+      color: #8f8f8f;
+      width: 370px;
     }
   }
 }
