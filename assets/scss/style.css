@@ -21,6 +21,28 @@
   margin-bottom: 30px;
 }
 
+.page .finding__job .acor-container .chacor3 span, .page .finding__job .acor-container .chacor2 span, .page .finding__job .acor-container .chacor1 span {
+  position: absolute;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  top: 0;
+  left: 25px;
+  z-index: 20;
+}
+
+.page .finding__job .acor-container .chacor3:after, .page .finding__job .acor-container .chacor2:after, .page .finding__job .acor-container .chacor1:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+}
+
 *,
 *::before,
 *::after {
@@ -263,13 +285,14 @@ input[type=submit] {
   line-height: 50px;
   letter-spacing: 0.05em;
   width: 395px;
-  margin-bottom: 46px;
+  margin-bottom: 26px;
 }
 .page .finding__job .acor-container .acor-body {
   margin: 0 auto;
   height: 0;
-  border-radius: 8px;
-  padding: 22px 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 7px 0;
   box-sizing: border-box;
   transition: color 0.5s, padding 0.5s;
   overflow: hidden;
@@ -282,6 +305,8 @@ input[type=submit] {
 .page .finding__job .acor-container label {
   cursor: pointer;
   border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   background-color: #f5f7ff;
   color: rgb(50, 50, 50);
   font-family: "Open Sans";
@@ -290,23 +315,30 @@ input[type=submit] {
   line-height: 50px;
   letter-spacing: 0.02em;
   display: block;
-  padding: 22px 242px 0px 59px;
+  padding-left: 59px;
   width: 100%;
   box-sizing: border-box;
   z-index: 100;
   transition: color 0.35s;
   position: relative;
 }
-.page .finding__job .acor-container label:after {
-  content: "1";
-  position: absolute;
-  top: 19px;
-  left: 14px;
-  width: 30px;
-  height: 30px;
-  color: #9444c9;
+.page .finding__job .acor-container .chacor1 span {
+  color: rgb(148, 68, 201);
+}
+.page .finding__job .acor-container .chacor2 span {
+  color: #626fff;
+}
+.page .finding__job .acor-container .chacor3 span {
+  color: #ff5c00;
+}
+.page .finding__job .acor-container .chacor1:after {
   background-color: #f3e0ff;
-  border-radius: 6px;
+}
+.page .finding__job .acor-container .chacor2:after {
+  background-color: #e7e9fe;
+}
+.page .finding__job .acor-container .chacor3:after {
+  background-color: #ffdecc;
 }
 .page .finding__job .acor-container input {
   display: none;
@@ -318,11 +350,17 @@ input[type=submit] {
   width: 10px;
   height: 17px;
   right: 24px;
-  top: 24px;
+  top: 0px;
+}
+.page .finding__job .acor-container input:checked + label {
+  position: relative;
 }
 .page .finding__job .acor-container input:checked + label:before {
+  position: absolute;
   transition: transform 0.35s;
   transform: rotate(90deg);
+  top: 15px;
+  right: 10px;
 }
 .page .finding__job .acor-container input:checked + label + .acor-body {
   height: auto;
@@ -333,6 +371,7 @@ input[type=submit] {
 .page .finding__job .acor-container input:checked + label + .acor-body p {
   display: block;
   width: 372px;
+  margin-top: -15px;
 }
 
 @font-face {
