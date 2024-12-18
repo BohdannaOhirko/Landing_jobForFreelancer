@@ -12,7 +12,7 @@
   letter-spacing: 0.02em;
 }
 
-.page .why__choose__us__title h2, .page .finding__job__title h2 {
+.page .featured__jobs__title h2, .page .why__choose__us__title h2, .page .finding__job__title h2 {
   color: rgb(53, 52, 52);
   font-family: Oswald;
   font-size: 40px;
@@ -21,7 +21,7 @@
   letter-spacing: 0.05em;
 }
 
-.page .why__choose__us .choose__block__description, .page .why__choose__us__description, .page .finding__job .acor-container input:checked + label + .acor-body, .page .finding__job .acor-container .acor-body, .page .banner__description {
+.page .featured__jobs__description, .page .why__choose__us .choose__block__description, .page .why__choose__us__description, .page .finding__job .acor-container input:checked + label + .acor-body, .page .finding__job .acor-container .acor-body, .page .banner__description {
   color: rgb(168, 168, 168);
   font-family: "Open Sans";
   font-weight: 400;
@@ -50,6 +50,18 @@
   width: 30px;
   height: 30px;
   border-radius: 6px;
+}
+
+.page .why__choose__us .choose__block {
+  border-radius: 20px;
+  box-shadow: 1px 1px 20px 0px rgba(128, 128, 128, 0.1);
+  background: rgb(255, 255, 255);
+}
+
+.page .why__choose__us .choose__block:hover {
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
+  background: rgb(249, 250, 255);
 }
 
 *,
@@ -382,6 +394,7 @@ input[type=submit] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 85px;
 }
 .page .why__choose__us__title h2 {
   margin-bottom: 20px;
@@ -403,6 +416,14 @@ input[type=submit] {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+.page .why__choose__us .choose__block {
+  width: 360px;
+  height: 254px;
+  padding: 40px 0px 34px 37px;
+}
+.page .why__choose__us .choose__block:hover {
+  margin-bottom: 15px;
 }
 .page .why__choose__us .choose__block__1 {
   position: relative;
@@ -461,6 +482,92 @@ input[type=submit] {
 .page .why__choose__us .choose__block__description {
   color: #8f8f8f;
   width: 370px;
+}
+.page .featured__jobs > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page .featured__jobs__title h2 {
+  margin-bottom: 20px;
+}
+.page .featured__jobs__description {
+  font-size: 14px;
+  width: 543px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__photo {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__title {
+  margin: 44px 0;
+  text-align: center;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__title h4 {
+  color: rgb(50, 50, 50);
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__title h6 {
+  color: rgb(66, 56, 175);
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__price__and__location {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__price, .page .featured__jobs .featured__jobs__blocks .featured__jobs__block__location {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__price div p, .page .featured__jobs .featured__jobs__blocks .featured__jobs__block__location div p {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #323232;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__price div span, .page .featured__jobs .featured__jobs__blocks .featured__jobs__block__location div span {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #898989;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__price div img {
+  width: 15px;
+  height: 18px;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__location div img {
+  width: 12px;
+  height: 17px;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block__location div span {
+  margin-left: 20px;
+}
+.page .featured__jobs .featured__jobs__blocks .featured__jobs__block:hover {
+  width: 380px;
+  height: 465px;
+  margin: auto;
+  padding: 51px 0px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px 0px rgba(71, 71, 71, 0.15);
+  background: rgb(249, 250, 255);
 }
 
 @font-face {
